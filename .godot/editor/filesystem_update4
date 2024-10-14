@@ -1,0 +1,8 @@
+res://enemies/gangsta1/enemy_gangsta1.tscn
+res://levels/test_levels/test_level.tscn
+res://player/player.tscn
+res://enemies/gangsta2/gangsta_2.tscn
+res://player/bullet.tscn
+res://ui/health_bar/health_bar.tscn
+res://ui/game_screen.tscn
+res://enemies/enemy_death_effect.tscn
