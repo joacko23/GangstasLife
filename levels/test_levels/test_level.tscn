@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://57v8khg6wbc2"]
+[gd_scene load_steps=6 format=3 uid="uid://57v8khg6wbc2"]
 
 [ext_resource type="PackedScene" uid="uid://m5aprl02auuo" path="res://levels/base_level.tscn" id="1_44ktn"]
 [ext_resource type="PackedScene" uid="uid://ccaj7u6w1n6wq" path="res://background/parallax_background.tscn" id="2_1wxp8"]
 [ext_resource type="PackedScene" uid="uid://bqcn6g0yflk41" path="res://ui/game_screen.tscn" id="4_gt2o1"]
 [ext_resource type="PackedScene" uid="uid://crruqy5ve7qd1" path="res://enemies/gangsta1/enemy_gangsta1.tscn" id="4_ixt2t"]
+[ext_resource type="PackedScene" uid="uid://dp68vnlte7rdn" path="res://enemies/gangsta2/gangsta_2.tscn" id="5_46nh2"]
 
 [node name="TestLevel" instance=ExtResource("1_44ktn")]
 
@@ -25,3 +26,6 @@ position = Vector2(448, -88)
 position = Vector2(640, -88)
 
 [node name="GameScreen" parent="." index="4" instance=ExtResource("4_gt2o1")]
+
+[node name="Gangsta2" parent="." index="5" instance=ExtResource("5_46nh2")]
+position = Vector2(304, -104)
