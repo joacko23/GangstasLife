@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bqcn6g0yflk41" path="res://ui/game_screen.tscn" id="4_s543l"]
 
 [node name="Level1" instance=ExtResource("1_1b4om")]
+position = Vector2(1, 0)
 
 [node name="ParallaxBackground" parent="." index="0" instance=ExtResource("2_hok2i")]
 offset = Vector2(0, -87)
@@ -32,4 +33,4 @@ position = Vector2(-80, 8)
 [node name="Point2" type="Marker2D" parent="Enemies/EnemyGangsta/PatrolPoints" index="1"]
 position = Vector2(48, 8)
 
-[node name="GameScreen" parent="." index="5" instance=ExtResource("4_s543l")]
+[node name="GameScreen" parent="." index="4" instance=ExtResource("4_s543l")]

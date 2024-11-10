@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://crhnuw1frqkt8"]
+
+[ext_resource type="Script" path="res://ui/pause_menu_screen.gd" id="1_abmv3"]
+[ext_resource type="Texture2D" uid="uid://b4gknws3c3bmr" path="res://ui/Background.png" id="1_drhcm"]
+[ext_resource type="Theme" uid="uid://c8qr773vgijij" path="res://ui/theme/game_theme.tres" id="2_2j105"]
+
+[node name="PauseMenuScreen" type="CanvasLayer"]
+process_mode = 3
+layer = 2
+script = ExtResource("1_abmv3")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.626028, 0.800257, 0.883798, 0.462745)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_drhcm")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_2j105")
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="ContinueButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "CONTINUE
+"
+
+[node name="MainMenuButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "MAIN MENU"
+
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

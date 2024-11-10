@@ -11,15 +11,15 @@ config_version=5
 [application]
 
 config/name="GangstasLife"
-run/main_scene="res://levels/test_levels/test_level.tscn"
+run/main_scene="res://ui/main_menu_screen.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-ScriptManager="*res://scripts/script_manager.gd"
 HealthManager="*res://scripts/health_manager.gd"
 CollectiblesManager="*res://scripts/collectibles_manager.gd"
+GameManager="*res://scripts/game_manager.gd"
 
 [display]
 

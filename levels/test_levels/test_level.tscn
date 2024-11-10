@@ -16,7 +16,7 @@ layer_0/tile_data = PackedInt32Array(-327571, 196608, 4, -262035, 196608, 4, -32
 
 [node name="GameScreen" parent="." index="3" instance=ExtResource("4_gt2o1")]
 
-[node name="EnemyGangsta" parent="." index="5" node_paths=PackedStringArray("patrol_points") instance=ExtResource("4_sqj6o")]
+[node name="EnemyGangsta" parent="." index="4" node_paths=PackedStringArray("patrol_points") instance=ExtResource("4_sqj6o")]
 position = Vector2(608, -136)
 patrol_points = NodePath("PatrolPoints")
 
@@ -28,7 +28,7 @@ position = Vector2(-104, 48)
 [node name="Point2" type="Marker2D" parent="EnemyGangsta/PatrolPoints" index="1"]
 position = Vector2(88, 48)
 
-[node name="Pickups" type="Node" parent="." index="6"]
+[node name="Pickups" type="Node" parent="." index="5"]
 
 [node name="HealthPickup" parent="Pickups" index="0" instance=ExtResource("5_c4snm")]
 position = Vector2(976, -136)
@@ -36,7 +36,7 @@ position = Vector2(976, -136)
 [node name="HealthPickup2" parent="Pickups" index="1" instance=ExtResource("5_c4snm")]
 position = Vector2(880, -136)
 
-[node name="Collectibles" type="Node" parent="." index="7"]
+[node name="Collectibles" type="Node" parent="." index="6"]
 
 [node name="Money" parent="Collectibles" index="0" instance=ExtResource("6_hqfmw")]
 position = Vector2(1136, -200)

@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://dok2pn4mnky8g"]
+
+[ext_resource type="Texture2D" uid="uid://b4gknws3c3bmr" path="res://ui/Background.png" id="1_jy8ky"]
+[ext_resource type="Script" path="res://ui/main_menu_screen.gd" id="1_xxjbv"]
+[ext_resource type="Theme" uid="uid://c8qr773vgijij" path="res://ui/theme/game_theme.tres" id="2_5001w"]
+
+[node name="MainMenuScreen" type="CanvasLayer"]
+process_mode = 3
+layer = 2
+script = ExtResource("1_xxjbv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_jy8ky")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_5001w")
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="PlayButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "PLAY
+"
+
+[node name="ExitButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "EXIT"
+
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

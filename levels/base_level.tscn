@@ -1357,6 +1357,6 @@ layer_2/tile_data = PackedInt32Array()
 position = Vector2(80, -152)
 
 [node name="PlayerCamera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player")]
-position = Vector2(80, -152)
+position = Vector2(64, -136)
 script = ExtResource("8_2qcef")
 player = NodePath("../Player")
