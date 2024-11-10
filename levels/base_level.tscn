@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://m5aprl02auuo"]
+[gd_scene load_steps=16 format=3 uid="uid://m5aprl02auuo"]
 
 [ext_resource type="Texture2D" uid="uid://bf2h864pqqrjh" path="res://titleset/game_titleset_1.png" id="1_rywxh"]
 [ext_resource type="PackedScene" uid="uid://d0gyt2dkfqnc4" path="res://player/player.tscn" id="2_7dmxn"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://x671lhqt5duj" path="res://titleset/24.png" id="4_8cjpj"]
 [ext_resource type="Texture2D" uid="uid://ducy1jcox5p3w" path="res://titleset/25.png" id="5_uwo7y"]
 [ext_resource type="Texture2D" uid="uid://c6a4ogvkh8mwm" path="res://titleset/26.png" id="6_1kfe0"]
+[ext_resource type="Script" path="res://player/player_camera.gd" id="8_2qcef"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v2jch"]
 texture = ExtResource("1_rywxh")
@@ -1355,4 +1356,7 @@ layer_2/tile_data = PackedInt32Array()
 [node name="Player" parent="." instance=ExtResource("2_7dmxn")]
 position = Vector2(80, -152)
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="PlayerCamera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player")]
+position = Vector2(80, -152)
+script = ExtResource("8_2qcef")
+player = NodePath("../Player")

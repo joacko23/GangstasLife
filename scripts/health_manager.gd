@@ -22,6 +22,7 @@ func decrease_health(health_amount : int):
 
 
 func increase_health(health_amount : int):
+	current_health += health_amount
 	if current_health > max_health:
 		current_health = max_health
 	

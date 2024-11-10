@@ -1,11 +1,13 @@
+res://scripts
+res://pickups/health_pickup
 res://player
+res://player/player_death_effect
+res://enemies
+res://enemies/gangsta2
 res://ui
 res://ui/health_bar
-res://scripts
-res://enemies/gangsta2
 res://scripts/state_machine
 res://levels/test_levels
 res://
-res://enemies
 res://levels
 res://background

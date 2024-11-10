@@ -79,7 +79,8 @@ func enemy_walk(delta : float):
 		timer.start()
 		
 		
-	
+func get_damage_amount() -> int:
+	return demage_amount
 	
 	
 	
