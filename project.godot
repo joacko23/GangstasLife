@@ -70,6 +70,7 @@ shoot={
 2d_physics/layer_5="PUCKUP"
 2d_physics/layer_6="COLLECTIBLES"
 2d_physics/layer_7="DOORS"
+2d_physics/layer_8="FLOOR"
 
 [rendering]
 

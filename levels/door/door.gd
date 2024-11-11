@@ -9,5 +9,5 @@ func _on_exit_area_2d_body_entered(body):
 		var player = body as CharacterBody2D
 		player.queue_free()
 		
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(2.0).timeout
 	SceneManager.transition_to_scene(next_scene)

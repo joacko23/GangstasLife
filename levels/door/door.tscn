@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://2up4sike65k3"]
 
 [ext_resource type="Script" path="res://levels/door/door.gd" id="1_uljxu"]
-[ext_resource type="Texture2D" uid="uid://ceethnogff5kf" path="res://levels/door/2111.w032.n003.200B.p1.200.jpg" id="2_jh111"]
+[ext_resource type="Texture2D" uid="uid://b4xue2asyxkqq" path="res://levels/door/2111.w032.n003.200B.p1.200.jpg" id="2_dpvxx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p4asn"]
 size = Vector2(160, 1792)
@@ -13,7 +13,7 @@ script = ExtResource("1_uljxu")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-845.5, -1272.5)
 scale = Vector2(0.0337143, 0.0308454)
-texture = ExtResource("2_jh111")
+texture = ExtResource("2_dpvxx")
 hframes = 4
 
 [node name="ExitArea2D" type="Area2D" parent="Sprite2D"]

@@ -194,6 +194,7 @@ func player_death():
 	var player_death_effect_instance = player_death_effect.instantiate() as Node2D
 	player_death_effect_instance.global_position = global_position
 	get_parent().add_child(player_death_effect_instance)
+	get_tree().reload_current_scene()
 	queue_free()
 
 func _on_hurt_box_body_entered(body: Node2D):
@@ -209,9 +210,9 @@ func _on_hurt_box_body_entered(body: Node2D):
 	if HealthManager.current_health == 0:
 		player_death()
 
-		
 
 
-func _on_area_2d_body_entered(body):
+
+func _on_floor_body_entered(body):
 	if body.is_in_group("Player"):
 		player_death()

@@ -1,9 +1,9 @@
-res://levels/level_1.tscn
-res://ui/theme/game_theme.tres
-res://levels/base_level.tscn
-res://player/player.gd
-res://player/player.tscn
-res://levels/door/door.gd
 res://levels/door/door.tscn
-res://scripts/scene_manager.gd
-res://scripts/game_manager.gd
+res://ui/theme/game_theme.tres
+res://levels/level_1.tscn
+res://player/player.tscn
+res://enemies/gangsta1/enemy_gangsta1.tscn
+res://enemies/gangsta2/gangsta_2.tscn
+res://levels/level_2.tscn
+res://player/player.gd
+res://levels/door/door.gd
