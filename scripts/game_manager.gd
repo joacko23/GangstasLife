@@ -1,5 +1,5 @@
 extends Node
-var level_1 = preload("res://levels/level_1.tscn")
+
 var pause_menu_screen = preload("res://ui/pause_menu_screen.tscn")
 var main_menu_screen = preload("res://ui/main_menu_screen.tscn")
 
@@ -13,7 +13,7 @@ func start_game():
 		continue_game()
 		return
 		
-	transition_to_scene(level_1.resource_path)
+	SceneManager.transition_to_scene("Level1")
 
 
 func exit_game():
@@ -36,6 +36,3 @@ func main_menu():
 	get_tree().get_root().add_child(main_menu_screen_instance)
 
 
-func transition_to_scene(scene_path):
-	await get_tree().create_timer(0.1).timeout
-	get_tree().change_scene_to_file(scene_path)

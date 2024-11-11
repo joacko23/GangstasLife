@@ -1,8 +1,9 @@
-res://ui/settings_menu_screen.tscn
+res://levels/level_1.tscn
 res://ui/theme/game_theme.tres
-res://ui/settings_menu_screen.gd
-res://ui/settings_data_resource.gd
-res://scripts/settings_manager.gd
-res://ui/main_menu_screen.gd
-res://ui/main_menu_screen.tscn
+res://levels/base_level.tscn
+res://player/player.gd
+res://player/player.tscn
+res://levels/door/door.gd
+res://levels/door/door.tscn
+res://scripts/scene_manager.gd
 res://scripts/game_manager.gd

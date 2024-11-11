@@ -1,20 +1,19 @@
-[gd_scene load_steps=9 format=3 uid="uid://cf683ph0n6daa"]
+[gd_scene load_steps=8 format=3 uid="uid://da2awdqvmn8s6"]
 
-[ext_resource type="PackedScene" uid="uid://m5aprl02auuo" path="res://levels/base_level.tscn" id="1_1b4om"]
-[ext_resource type="PackedScene" uid="uid://ccaj7u6w1n6wq" path="res://background/parallax_background.tscn" id="2_hok2i"]
-[ext_resource type="PackedScene" uid="uid://crruqy5ve7qd1" path="res://enemies/gangsta1/enemy_gangsta1.tscn" id="3_pwtgr"]
-[ext_resource type="PackedScene" uid="uid://bqcn6g0yflk41" path="res://ui/game_screen.tscn" id="4_s543l"]
-[ext_resource type="PackedScene" uid="uid://bkguac4rj6dyt" path="res://pickups/health_pickup/health_pickup.tscn" id="4_wp5xl"]
-[ext_resource type="PackedScene" uid="uid://cj5pcs1brgfi3" path="res://collectibles/money/money.tscn" id="5_emumh"]
-[ext_resource type="PackedScene" uid="uid://2up4sike65k3" path="res://levels/door/door.tscn" id="7_53sl0"]
+[ext_resource type="PackedScene" uid="uid://m5aprl02auuo" path="res://levels/base_level.tscn" id="1_evnfi"]
+[ext_resource type="PackedScene" uid="uid://ccaj7u6w1n6wq" path="res://background/parallax_background.tscn" id="2_7ceqg"]
+[ext_resource type="PackedScene" uid="uid://crruqy5ve7qd1" path="res://enemies/gangsta1/enemy_gangsta1.tscn" id="3_ckl8w"]
+[ext_resource type="PackedScene" uid="uid://bqcn6g0yflk41" path="res://ui/game_screen.tscn" id="4_mhce1"]
+[ext_resource type="PackedScene" uid="uid://bkguac4rj6dyt" path="res://pickups/health_pickup/health_pickup.tscn" id="5_lnm7f"]
+[ext_resource type="PackedScene" uid="uid://cj5pcs1brgfi3" path="res://collectibles/money/money.tscn" id="6_3ndhk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ujo45"]
 size = Vector2(3466, 20)
 
-[node name="Level1" instance=ExtResource("1_1b4om")]
+[node name="Level1" instance=ExtResource("1_evnfi")]
 position = Vector2(1, 0)
 
-[node name="ParallaxBackground" parent="." index="0" instance=ExtResource("2_hok2i")]
+[node name="ParallaxBackground" parent="." index="0" instance=ExtResource("2_7ceqg")]
 offset = Vector2(0, -87)
 transform = Transform2D(1, 0, 0, 1, 0, -87)
 
@@ -27,7 +26,7 @@ position = Vector2(56, -48)
 
 [node name="Enemies" type="Node" parent="." index="3"]
 
-[node name="EnemyGangsta" parent="Enemies" index="0" node_paths=PackedStringArray("patrol_points") instance=ExtResource("3_pwtgr")]
+[node name="EnemyGangsta" parent="Enemies" index="0" node_paths=PackedStringArray("patrol_points") instance=ExtResource("3_ckl8w")]
 position = Vector2(1016, -48)
 patrol_points = NodePath("PatrolPoints")
 
@@ -39,7 +38,7 @@ position = Vector2(-80, 8)
 [node name="Point2" type="Marker2D" parent="Enemies/EnemyGangsta/PatrolPoints" index="1"]
 position = Vector2(48, 8)
 
-[node name="EnemyGangsta2" parent="Enemies" index="1" node_paths=PackedStringArray("patrol_points") instance=ExtResource("3_pwtgr")]
+[node name="EnemyGangsta2" parent="Enemies" index="1" node_paths=PackedStringArray("patrol_points") instance=ExtResource("3_ckl8w")]
 position = Vector2(2992, -256)
 patrol_points = NodePath("../EnemyGangsta/PatrolPoints")
 
@@ -51,7 +50,7 @@ position = Vector2(-80, 8)
 [node name="Point2" type="Marker2D" parent="Enemies/EnemyGangsta2/PatrolPoints" index="1"]
 position = Vector2(48, 8)
 
-[node name="EnemyGangsta3" parent="Enemies" index="2" node_paths=PackedStringArray("patrol_points") instance=ExtResource("3_pwtgr")]
+[node name="EnemyGangsta3" parent="Enemies" index="2" node_paths=PackedStringArray("patrol_points") instance=ExtResource("3_ckl8w")]
 position = Vector2(200, -256)
 patrol_points = NodePath("../EnemyGangsta/PatrolPoints")
 
@@ -73,52 +72,52 @@ editor_draw_limits = true
 smoothing_enabled = true
 smoothing_distance = 2
 
-[node name="GameScreen" parent="." index="5" instance=ExtResource("4_s543l")]
+[node name="GameScreen" parent="." index="5" instance=ExtResource("4_mhce1")]
 
 [node name="Pickups" type="Node" parent="." index="6"]
 
-[node name="HealthPickup" parent="Pickups" index="0" instance=ExtResource("4_wp5xl")]
+[node name="HealthPickup" parent="Pickups" index="0" instance=ExtResource("5_lnm7f")]
 position = Vector2(64, -288)
 
-[node name="HealthPickup2" parent="Pickups" index="1" instance=ExtResource("4_wp5xl")]
+[node name="HealthPickup2" parent="Pickups" index="1" instance=ExtResource("5_lnm7f")]
 position = Vector2(1768, -264)
 
-[node name="HealthPickup3" parent="Pickups" index="2" instance=ExtResource("4_wp5xl")]
+[node name="HealthPickup3" parent="Pickups" index="2" instance=ExtResource("5_lnm7f")]
 position = Vector2(3336, -88)
 
-[node name="HealthPickup4" parent="Pickups" index="3" instance=ExtResource("4_wp5xl")]
+[node name="HealthPickup4" parent="Pickups" index="3" instance=ExtResource("5_lnm7f")]
 position = Vector2(3248, -304)
 
 [node name="Collectibles" type="Node" parent="." index="7"]
 
-[node name="Money" parent="Collectibles" index="0" instance=ExtResource("5_emumh")]
+[node name="Money" parent="Collectibles" index="0" instance=ExtResource("6_3ndhk")]
 position = Vector2(2280, -264)
 
-[node name="Money2" parent="Collectibles" index="1" instance=ExtResource("5_emumh")]
+[node name="Money2" parent="Collectibles" index="1" instance=ExtResource("6_3ndhk")]
 position = Vector2(2312, -288)
 
-[node name="Money3" parent="Collectibles" index="2" instance=ExtResource("5_emumh")]
+[node name="Money3" parent="Collectibles" index="2" instance=ExtResource("6_3ndhk")]
 position = Vector2(2352, -296)
 
-[node name="Money4" parent="Collectibles" index="3" instance=ExtResource("5_emumh")]
+[node name="Money4" parent="Collectibles" index="3" instance=ExtResource("6_3ndhk")]
 position = Vector2(2392, -288)
 
-[node name="Money5" parent="Collectibles" index="4" instance=ExtResource("5_emumh")]
+[node name="Money5" parent="Collectibles" index="4" instance=ExtResource("6_3ndhk")]
 position = Vector2(2424, -256)
 
-[node name="Money6" parent="Collectibles" index="5" instance=ExtResource("5_emumh")]
+[node name="Money6" parent="Collectibles" index="5" instance=ExtResource("6_3ndhk")]
 position = Vector2(1360, -88)
 
-[node name="Money7" parent="Collectibles" index="6" instance=ExtResource("5_emumh")]
+[node name="Money7" parent="Collectibles" index="6" instance=ExtResource("6_3ndhk")]
 position = Vector2(1344, -288)
 
-[node name="Money8" parent="Collectibles" index="7" instance=ExtResource("5_emumh")]
+[node name="Money8" parent="Collectibles" index="7" instance=ExtResource("6_3ndhk")]
 position = Vector2(1024, -352)
 
-[node name="Money9" parent="Collectibles" index="8" instance=ExtResource("5_emumh")]
+[node name="Money9" parent="Collectibles" index="8" instance=ExtResource("6_3ndhk")]
 position = Vector2(2584, -88)
 
-[node name="Money10" parent="Collectibles" index="9" instance=ExtResource("5_emumh")]
+[node name="Money10" parent="Collectibles" index="9" instance=ExtResource("6_3ndhk")]
 position = Vector2(3120, -88)
 
 [node name="Floor" type="Node" parent="." index="8"]
@@ -129,9 +128,5 @@ position = Vector2(3120, -88)
 position = Vector2(1723, 0)
 shape = SubResource("RectangleShape2D_ujo45")
 debug_color = Color(0.882859, 0.262061, 0.535783, 0.42)
-
-[node name="Door" parent="." index="9" instance=ExtResource("7_53sl0")]
-position = Vector2(4263, 992)
-next_scene = "Level2"
 
 [connection signal="body_entered" from="Floor/Area2D" to="Player" method="_on_area_2d_body_entered"]

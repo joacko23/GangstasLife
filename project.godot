@@ -21,6 +21,7 @@ HealthManager="*res://scripts/health_manager.gd"
 CollectiblesManager="*res://scripts/collectibles_manager.gd"
 GameManager="*res://scripts/game_manager.gd"
 SettingsManager="*res://scripts/settings_manager.gd"
+SceneManager="*res://scripts/scene_manager.gd"
 
 [display]
 
@@ -68,6 +69,7 @@ shoot={
 2d_physics/layer_4="ATTACKZONEENEMY"
 2d_physics/layer_5="PUCKUP"
 2d_physics/layer_6="COLLECTIBLES"
+2d_physics/layer_7="DOORS"
 
 [rendering]
 
