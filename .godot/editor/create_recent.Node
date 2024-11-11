@@ -1,3 +1,4 @@
+OptionButton
 TextureButton
 TextureRect
 Button
@@ -11,5 +12,3 @@ Control
 HBoxContainer
 Node
 CollisionShape2D
-Area2D
-AnimatedSprite2D
