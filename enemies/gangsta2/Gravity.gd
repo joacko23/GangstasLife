@@ -12,3 +12,4 @@ func _physics_process(delta):
 		character_body_2d.velocity.y += GRAVITY * delta
 	
 	character_body_2d.move_and_slide()
+	

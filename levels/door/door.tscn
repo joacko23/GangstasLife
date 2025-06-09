@@ -1,27 +1,26 @@
 [gd_scene load_steps=4 format=3 uid="uid://2up4sike65k3"]
 
 [ext_resource type="Script" path="res://levels/door/door.gd" id="1_uljxu"]
-[ext_resource type="Texture2D" uid="uid://b4xue2asyxkqq" path="res://levels/door/2111.w032.n003.200B.p1.200.jpg" id="2_dpvxx"]
+[ext_resource type="Texture2D" uid="uid://ctgwrtdfoxppo" path="res://levels/door/pixil-frame-0 (3).png" id="2_3qqqi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p4asn"]
-size = Vector2(160, 1792)
+size = Vector2(24, 112)
 
 [node name="Door" type="Node2D"]
 position = Vector2(880, 1232)
 script = ExtResource("1_uljxu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-845.5, -1272.5)
-scale = Vector2(0.0337143, 0.0308454)
-texture = ExtResource("2_dpvxx")
-hframes = 4
+position = Vector2(-850, -1285)
+texture = ExtResource("2_3qqqi")
 
 [node name="ExitArea2D" type="Area2D" parent="Sprite2D"]
+position = Vector2(-848, -1264)
 collision_layer = 64
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/ExitArea2D"]
-position = Vector2(752, 160)
+position = Vector2(860, 1264)
 shape = SubResource("RectangleShape2D_p4asn")
 debug_color = Color(0.831696, 0.342619, 0.501768, 0.42)
 

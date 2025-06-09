@@ -1,3 +1,4 @@
+res://enemies/gangsta2
 res://scripts
 res://levels/door
 res://ui
@@ -6,7 +7,6 @@ res://pickups/health_pickup
 res://player
 res://player/player_death_effect
 res://enemies
-res://enemies/gangsta2
 res://ui/health_bar
 res://scripts/state_machine
 res://levels/test_levels

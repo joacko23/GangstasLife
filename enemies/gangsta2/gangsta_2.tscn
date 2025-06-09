@@ -1,15 +1,18 @@
-[gd_scene load_steps=37 format=3 uid="uid://dp68vnlte7rdn"]
+[gd_scene load_steps=32 format=3 uid="uid://dp68vnlte7rdn"]
 
 [ext_resource type="Script" path="res://enemies/gangsta2/baseEnemy.gd" id="1_cghhj"]
 [ext_resource type="Texture2D" uid="uid://dti0faxihyfnh" path="res://enemies/gangsta2/Attack_1.png" id="1_dest5"]
 [ext_resource type="Texture2D" uid="uid://dr3qv3rbkv3fp" path="res://enemies/gangsta2/Idle.png" id="2_01t2q"]
-[ext_resource type="PackedScene" uid="uid://c2pkcp6utg22c" path="res://enemies/enemy_death_effect.tscn" id="2_uosmd"]
-[ext_resource type="Texture2D" uid="uid://b27fnkfxdfd3v" path="res://enemies/gangsta2/Walk.png" id="4_565vn"]
 [ext_resource type="Script" path="res://scripts/state_machine/node_fiinite_state_machine.gd" id="4_has2n"]
+[ext_resource type="Texture2D" uid="uid://bk6bgfwftqsgo" path="res://enemies/gangsta2/Dead.png" id="4_veyb2"]
 [ext_resource type="Script" path="res://enemies/gangsta2/idle_state.gd" id="5_eiiyq"]
+[ext_resource type="Script" path="res://enemies/gangsta2/gravity.gd" id="6_dn1fn"]
 [ext_resource type="Script" path="res://enemies/gangsta2/attack_state.gd" id="6_p1sdg"]
 [ext_resource type="Script" path="res://enemies/gangsta2/state_machine_controller.gd" id="7_qf2ul"]
-[ext_resource type="Script" path="res://enemies/gangsta2/Walk.gd" id="10_l22w8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ych55"]
+radius = 6.0
+height = 68.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_42kdf"]
 atlas = ExtResource("1_dest5")
@@ -34,6 +37,26 @@ region = Rect2(512, 0, 128, 128)
 [sub_resource type="AtlasTexture" id="AtlasTexture_4qtka"]
 atlas = ExtResource("1_dest5")
 region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efpjp"]
+atlas = ExtResource("4_veyb2")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fubvx"]
+atlas = ExtResource("4_veyb2")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tp7pk"]
+atlas = ExtResource("4_veyb2")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1516g"]
+atlas = ExtResource("4_veyb2")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_njd8c"]
+atlas = ExtResource("4_veyb2")
+region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_espve"]
 atlas = ExtResource("2_01t2q")
@@ -63,46 +86,6 @@ region = Rect2(640, 0, 128, 128)
 atlas = ExtResource("2_01t2q")
 region = Rect2(768, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2lw2v"]
-atlas = ExtResource("4_565vn")
-region = Rect2(0, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_41tm7"]
-atlas = ExtResource("4_565vn")
-region = Rect2(128, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q8sqj"]
-atlas = ExtResource("4_565vn")
-region = Rect2(256, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nhxcj"]
-atlas = ExtResource("4_565vn")
-region = Rect2(384, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_amw3j"]
-atlas = ExtResource("4_565vn")
-region = Rect2(512, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_r2vqk"]
-atlas = ExtResource("4_565vn")
-region = Rect2(640, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7gn8e"]
-atlas = ExtResource("4_565vn")
-region = Rect2(768, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_r128u"]
-atlas = ExtResource("4_565vn")
-region = Rect2(896, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_m5jxn"]
-atlas = ExtResource("4_565vn")
-region = Rect2(1024, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w8vhd"]
-atlas = ExtResource("4_565vn")
-region = Rect2(1152, 0, 128, 128)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_kaoh6"]
 animations = [{
 "frames": [{
@@ -127,6 +110,26 @@ animations = [{
 "loop": true,
 "name": &"attack",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_efpjp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fubvx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tp7pk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1516g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_njd8c")
+}],
+"loop": false,
+"name": &"dead",
+"speed": 7.0
 }, {
 "frames": [],
 "loop": true,
@@ -158,76 +161,54 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 8.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2lw2v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_41tm7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_q8sqj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nhxcj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_amw3j")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_r2vqk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7gn8e")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_r128u")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_m5jxn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_w8vhd")
-}],
-"loop": true,
-"name": &"walk",
-"speed": 10.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ykdyc"]
-radius = 8.0
+radius = 11.0
 height = 80.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u57we"]
 radius = 120.266
 
 [node name="BaseEnemy" type="CharacterBody2D" node_paths=PackedStringArray("node_finite_state_machine") groups=["Enemy"]]
+position = Vector2(2, -1)
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_cghhj")
-death_effect = ExtResource("2_uosmd")
 node_finite_state_machine = NodePath("StateMachine")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -35)
+shape = SubResource("CapsuleShape2D_ych55")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -64)
 sprite_frames = SubResource("SpriteFrames_kaoh6")
-animation = &"walk"
-autoplay = "walk"
-frame = 9
-frame_progress = 0.212086
+animation = &"dead"
+autoplay = "idle"
+frame = 4
+frame_progress = 1.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Gravity" type="Node" parent="." node_paths=PackedStringArray("character_body_2d", "animated_sprite_2d")]
+script = ExtResource("6_dn1fn")
+character_body_2d = NodePath("..")
+animated_sprite_2d = NodePath("../AnimatedSprite2D")
+
+[node name="HurtBox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(0, -40)
 shape = SubResource("CapsuleShape2D_ykdyc")
+debug_color = Color(0.851841, 0.272371, 0.640409, 0.42)
 
 [node name="StateMachineController" type="Node" parent="." node_paths=PackedStringArray("node_finite_state_machine")]
 script = ExtResource("7_qf2ul")
 node_finite_state_machine = NodePath("../StateMachine")
 
-[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]
+[node name="StateMachine" type="Node" parent="."]
 script = ExtResource("4_has2n")
-initial_node_state = NodePath("Walk")
 
 [node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("character_body_2d", "animated_sprite_2d")]
 script = ExtResource("5_eiiyq")
@@ -241,28 +222,16 @@ script = ExtResource("6_p1sdg")
 character_body_2d = NodePath("../..")
 animated_sprite_2d = NodePath("../../AnimatedSprite2D")
 
-[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("character_body_2d", "patrol_points")]
-script = ExtResource("10_l22w8")
-character_body_2d = NodePath("../..")
-patrol_points = NodePath("../../PatrolPoints")
-
 [node name="AttackArea2D" type="Area2D" parent="."]
 collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea2D"]
-position = Vector2(0, -32)
+position = Vector2(-1, -25)
 shape = SubResource("CircleShape2D_u57we")
 debug_color = Color(0.705281, 0.486428, 0.135562, 0.42)
 
-[node name="PatrolPoints" type="Node" parent="."]
-
-[node name="Point1" type="Marker2D" parent="PatrolPoints"]
-position = Vector2(448, -88)
-
-[node name="Point2" type="Marker2D" parent="PatrolPoints"]
-position = Vector2(640, -88)
-
+[connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
 [connection signal="timeout" from="StateMachine/Idle/Timer" to="StateMachine/Idle" method="_on_timer_timeout"]
 [connection signal="body_entered" from="AttackArea2D" to="StateMachineController" method="_on_attack_area_2d_body_entered"]
 [connection signal="body_exited" from="AttackArea2D" to="StateMachineController" method="_on_attack_area_2d_body_exited"]

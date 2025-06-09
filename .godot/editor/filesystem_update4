@@ -1,9 +1,11 @@
-res://levels/door/door.tscn
-res://ui/theme/game_theme.tres
 res://levels/level_1.tscn
+res://ui/theme/game_theme.tres
+res://enemies/gangsta2/baseEnemy.gd
+res://enemies/gangsta2/Walk.gd
 res://player/player.tscn
 res://enemies/gangsta1/enemy_gangsta1.tscn
 res://enemies/gangsta2/gangsta_2.tscn
 res://levels/level_2.tscn
-res://player/player.gd
-res://levels/door/door.gd
+res://player/bullet.tscn
+res://ui/pause_menu_screen.tscn
+res://ui/game_screen.tscn

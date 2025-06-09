@@ -1,8 +1,8 @@
+Node
 CollisionShape2D
 Area2D
 Node2D
 Sprite2D
-Node
 OptionButton
 TextureButton
 TextureRect
