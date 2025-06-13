@@ -1,3 +1,5 @@
+AudioStreamPlayer
+AudioStreamPlayer2D
 Node
 CollisionShape2D
 Area2D
@@ -10,5 +12,3 @@ Button
 VBoxContainer
 MarginContainer
 PanelContainer
-CanvasLayer
-Label

@@ -22,6 +22,7 @@ CollectiblesManager="*res://scripts/collectibles_manager.gd"
 GameManager="*res://scripts/game_manager.gd"
 SettingsManager="*res://scripts/settings_manager.gd"
 SceneManager="*res://scripts/scene_manager.gd"
+AudioController="*res://audio/audio_controller.tscn"
 
 [display]
 

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ctgwrtdfoxppo" path="res://levels/door/pixil-frame-0 (3).png" id="2_3qqqi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p4asn"]
-size = Vector2(24, 112)
+size = Vector2(38, 112)
 
 [node name="Door" type="Node2D"]
 position = Vector2(880, 1232)
@@ -20,7 +20,7 @@ collision_layer = 64
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/ExitArea2D"]
-position = Vector2(860, 1264)
+position = Vector2(853, 1264)
 shape = SubResource("RectangleShape2D_p4asn")
 debug_color = Color(0.831696, 0.342619, 0.501768, 0.42)
 

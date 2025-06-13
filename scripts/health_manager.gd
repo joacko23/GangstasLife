@@ -10,7 +10,6 @@ func _ready():
 	current_health = max_health
 
 
-
 func decrease_health(health_amount : int):
 	current_health -= health_amount
 	
@@ -27,4 +26,8 @@ func increase_health(health_amount : int):
 		current_health = max_health
 	
 	print("increase_health called")
+	on_health_changed.emit(current_health)
+	
+func reset_health():
+	current_health = max_health
 	on_health_changed.emit(current_health)

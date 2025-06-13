@@ -30,15 +30,18 @@ func initialize_controls():
 
 
 func _on_window_mode_options_button_item_selected(index):
+	AudioController.play_select()
 	var window_mode = windows_modes.get(window_mode_options_button.get_item_text(index)) as int
 	SettingsManager.set_window_mode(window_mode, index)
 
 
 func _on_resolution_option_button_item_selected(index):
+	AudioController.play_select()
 	var resolution = resolutions.get(resolution_option_button.get_item_text(index)) as Vector2i
 	SettingsManager.set_resolution(resolution, index)
 
 
 func _on_main_menu_button_pressed():
+	AudioController.play_select()
 	SettingsManager.save_settings()
 	queue_free()

@@ -1,0 +1,65 @@
+[gd_scene load_steps=13 format=3 uid="uid://ngr2xf40ji2o"]
+
+[ext_resource type="AudioStream" uid="uid://bplbmdyp2esc8" path="res://audio/sounds/submachine-gun-79846.mp3" id="1_8ep80"]
+[ext_resource type="Script" path="res://audio/audio_controller.gd" id="1_ninfj"]
+[ext_resource type="AudioStream" uid="uid://cyw4nnqvkp1g5" path="res://audio/sounds/180904-woodland04-run-steps-skip-jump-clip-47486.mp3" id="2_c7pq0"]
+[ext_resource type="AudioStream" uid="uid://br1gk8esiy7b1" path="res://audio/sounds/roblox-classic-jump.mp3" id="3_n1pjx"]
+[ext_resource type="AudioStream" uid="uid://n4qyfrblmfyt" path="res://audio/sounds/classic_hurt.mp3" id="4_y8nrk"]
+[ext_resource type="AudioStream" uid="uid://bk6vcamv0synt" path="res://audio/sounds/hunt_showdown_death_sound_effect.mp3" id="5_j6fph"]
+[ext_resource type="AudioStream" uid="uid://cvvskoyme1go" path="res://audio/music/Red Right Hand (From Peaky Blinders) (8-Bit Nick Cave & The Bad Seeds Emulation) - 8-Bit Arcade.mp3" id="6_xeauf"]
+[ext_resource type="AudioStream" uid="uid://dgteymctfj6hb" path="res://audio/sounds/konami-pause-sound-1.mp3" id="7_g3wop"]
+[ext_resource type="AudioStream" uid="uid://cvjcjbb0ergmq" path="res://audio/sounds/snkneo-geo-insert-coin-sound.mp3" id="8_ytsrv"]
+[ext_resource type="AudioStream" uid="uid://b6dsxoshgnthd" path="res://audio/sounds/donkey-kong-coin.mp3" id="9_whq07"]
+[ext_resource type="AudioStream" uid="uid://bc5owffmrlhlo" path="res://audio/sounds/metal-slug-mission-complete.mp3" id="11_uycx7"]
+[ext_resource type="AudioStream" uid="uid://dhgf6d6ejnedj" path="res://audio/sounds/ps4-select-button.mp3" id="12_ud0uq"]
+
+[node name="AudioController" type="Node2D"]
+script = ExtResource("1_ninfj")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_xeauf")
+autoplay = true
+bus = &"Music"
+
+[node name="Shoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_8ep80")
+bus = &"Sound_effects"
+
+[node name="Walk" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_c7pq0")
+volume_db = 10.4
+bus = &"Sound_effects"
+
+[node name="Jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_n1pjx")
+volume_db = 7.36
+bus = &"Sound_effects"
+
+[node name="Hurt" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_y8nrk")
+bus = &"Sound_effects"
+
+[node name="Death" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_j6fph")
+bus = &"Sound_effects"
+
+[node name="Pause" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_g3wop")
+bus = &"Sound_effects"
+
+[node name="Money" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_ytsrv")
+volume_db = 8.32
+bus = &"Sound_effects"
+
+[node name="Pickup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_whq07")
+bus = &"Sound_effects"
+
+[node name="EndLevel" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_uycx7")
+bus = &"Sound_effects"
+
+[node name="Select" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_ud0uq")
+bus = &"Sound_effects"

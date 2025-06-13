@@ -14,3 +14,4 @@ func on_collectible_award_received(total_award : int):
 
 func _on_pause_texture_button_pressed():
 	GameManager.pause_game()
+	AudioController.play_pause()

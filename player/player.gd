@@ -37,7 +37,7 @@ func _physics_process(delta : float):
 	player_jump(delta)
 	
 	player_muzzle_position()
-	player_sooting(delta)
+	player_shooting(delta)
 	
 	move_and_slide()
 	
@@ -77,20 +77,24 @@ func player_run_or_walk(delta : float):
 				velocity.x += direction * run_speed * delta
 				velocity.x = clamp(velocity.x, -max_horizontal_speed_run, max_horizontal_speed_run)
 				current_state = State.Run
+				AudioController.play_walk()
 			else:
 				velocity.x += direction * walk_speed * delta
 				velocity.x = clamp(velocity.x, -max_horizontal_speed_walk, max_horizontal_speed_walk)
 				current_state = State.Walk
+				AudioController.play_walk()
 				
 			animated_sprite_2d.flip_h = direction < 0  # Gira el sprite
 		else:
 			velocity.x = move_toward(velocity.x, 0, slow_down_speed * delta)  
 			if current_state in [State.Walk, State.Run]:
 				current_state = State.Idle
+				AudioController.stop_walk()
 
 func player_jump(delta : float):
 	# Inicia el salto si está en el suelo
 	if Input.is_action_just_pressed("jump") and is_on_floor():
+		AudioController.play_jump()
 		velocity.y = jump_velocity
 		current_state = State.Jump
 	
@@ -104,10 +108,12 @@ func player_jump(delta : float):
 		if direction != 0:
 			animated_sprite_2d.flip_h = direction < 0
 
-func player_sooting(delta : float):
+func player_shooting(delta : float):
 	if Input.is_action_just_pressed("shoot"):
 		# Instanciar la bala
 		var bullet_instance = bullet.instantiate() as Node2D
+		#Sonido del disparo
+		AudioController.play_shoot()
 		
 		# Determina la dirección de la bala según hacia dónde esté mirando el personaje
 		if animated_sprite_2d.flip_h:
@@ -194,11 +200,12 @@ func player_death():
 	var player_death_effect_instance = player_death_effect.instantiate() as Node2D
 	player_death_effect_instance.global_position = global_position
 	get_parent().add_child(player_death_effect_instance)
-	get_tree().reload_current_scene()
+	HealthManager.reset_health()
 	queue_free()
 
 func _on_hurt_box_body_entered(body: Node2D):
 	if body.is_in_group("Enemy"):
+		AudioController.play_hurt()
 		if body.has_method("get_damage_amount"):  # Verificar si tiene el método
 			var damage = body.get_damage_amount()
 			print("Enemy entered, Damage Amount: ", damage)

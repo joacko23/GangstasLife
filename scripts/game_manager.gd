@@ -35,4 +35,17 @@ func main_menu():
 	var main_menu_screen_instance = main_menu_screen.instantiate()
 	get_tree().get_root().add_child(main_menu_screen_instance)
 
+func reset_game():
+	
+	# Reset de HealthManager
+	if has_node("/root/HealthManager"):
+		$"/root/HealthManager".reset_health()
+
+
+	# Reset de CollectibleManager
+	if has_node("/root/CollectibleManager"):
+		$"/root/CollectibleManager".reset_awards()
+	
+	# Reiniciar nivel
+	SceneManager.transition_to_scene("Level1")
 
