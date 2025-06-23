@@ -424,7 +424,7 @@ position = Vector2(28, -38)
 
 [node name="HurtBox" type="Area2D" parent="."]
 collision_layer = 2
-collision_mask = 4
+collision_mask = 256
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(-7, -35)
@@ -432,4 +432,4 @@ shape = SubResource("CapsuleShape2D_hjtd8")
 debug_color = Color(0.582097, 0.0890074, 0.282459, 0.42)
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
-[connection signal="body_entered" from="HurtBox" to="." method="_on_hurt_box_body_entered"]
+[connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]

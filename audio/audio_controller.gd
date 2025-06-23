@@ -37,6 +37,7 @@ func play_hurt():
 
 func play_death():
 	if not mute:
+		stop_walk()
 		$Death.play()
 
 

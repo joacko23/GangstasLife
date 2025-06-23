@@ -1,8 +1,10 @@
-AudioStreamPlayer
-AudioStreamPlayer2D
-Node
+Timer
 CollisionShape2D
 Area2D
+Node
+Marker2D
+AudioStreamPlayer
+AudioStreamPlayer2D
 Node2D
 Sprite2D
 OptionButton
@@ -10,5 +12,3 @@ TextureButton
 TextureRect
 Button
 VBoxContainer
-MarginContainer
-PanelContainer

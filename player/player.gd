@@ -203,23 +203,21 @@ func player_death():
 	HealthManager.reset_health()
 	queue_free()
 
-func _on_hurt_box_body_entered(body: Node2D):
-	if body.is_in_group("Enemy"):
-		AudioController.play_hurt()
-		if body.has_method("get_damage_amount"):  # Verificar si tiene el método
-			var damage = body.get_damage_amount()
-			print("Enemy entered, Damage Amount: ", damage)
-			current_state = State.Hurt
-			HealthManager.decrease_health(damage)
-		else:
-			print("Enemy does not have get_damage_amount method!")
-	
-	if HealthManager.current_health == 0:
-		player_death()
-
-
-
 
 func _on_floor_body_entered(body):
 	if body.is_in_group("Player"):
 		player_death()
+
+
+func _on_hurt_box_area_entered(area):
+	if area.get_parent().has_method("get_damage_amount"):
+		AudioController.play_hurt()
+		var node = area.get_parent() as Node
+		var damage = node.damage_amount
+		current_state = State.Hurt
+		HealthManager.decrease_health(damage)
+	else:
+		print("Enemy does not have get_damage_amount method!")
+		
+	if HealthManager.current_health == 0:
+		player_death()	

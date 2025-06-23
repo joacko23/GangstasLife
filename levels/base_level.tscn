@@ -1348,6 +1348,7 @@ texture = ExtResource("6_1kfe0")
 3:2/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSet" id="TileSet_hqnoq"]
+tile_size = Vector2i(6, 9)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_v2jch")
 sources/1 = SubResource("TileSetAtlasSource_m175c")
