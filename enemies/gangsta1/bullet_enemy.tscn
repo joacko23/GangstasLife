@@ -1,22 +1,22 @@
-[gd_scene load_steps=9 format=3 uid="uid://c78xvq1r1q84p"]
+[gd_scene load_steps=9 format=3 uid="uid://dk7igg5tn1ue0"]
 
-[ext_resource type="Texture2D" uid="uid://dfrs1c4l57q0x" path="res://player/All_Fire_Bullet_Pixel_16x16.png" id="1_bjl83"]
-[ext_resource type="Script" path="res://player/bullet.gd" id="2_smee5"]
+[ext_resource type="Texture2D" uid="uid://dfrs1c4l57q0x" path="res://player/All_Fire_Bullet_Pixel_16x16.png" id="1_2oism"]
+[ext_resource type="Script" path="res://enemies/gangsta1/BulletEnemy.gd" id="2_e5rx7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dkeqq"]
-atlas = ExtResource("1_bjl83")
+atlas = ExtResource("1_2oism")
 region = Rect2(336, 99, 16, 9)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4rewr"]
-atlas = ExtResource("1_bjl83")
+atlas = ExtResource("1_2oism")
 region = Rect2(352, 99, 16, 9)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lvngc"]
-atlas = ExtResource("1_bjl83")
+atlas = ExtResource("1_2oism")
 region = Rect2(368, 99, 16, 9)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_15ba2"]
-atlas = ExtResource("1_bjl83")
+atlas = ExtResource("1_2oism")
 region = Rect2(384, 99, 16, 9)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ufruu"]
@@ -47,12 +47,12 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_23k6o"]
 radius = 4.0
 
-[node name="Bullet" type="AnimatedSprite2D"]
+[node name="BulletEnemy" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_ufruu")
 animation = &"shot"
 frame = 2
 frame_progress = 0.0806616
-script = ExtResource("2_smee5")
+script = ExtResource("2_e5rx7")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
@@ -60,8 +60,8 @@ one_shot = true
 autostart = true
 
 [node name="Hitbox" type="Area2D" parent="."]
-collision_layer = 256
-collision_mask = 7
+collision_layer = 512
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2(1, 1)

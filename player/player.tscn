@@ -424,7 +424,7 @@ position = Vector2(28, -38)
 
 [node name="HurtBox" type="Area2D" parent="."]
 collision_layer = 2
-collision_mask = 256
+collision_mask = 512
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(-7, -35)

@@ -1,11 +1,11 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1750696254
+::res://::1750871789
 default_bus_layout.tres::AudioBusLayout::4693498932523198660::1749840342::0::1::::<><>::
 icon.svg::CompressedTexture2D::6838742916278801603::1725062176::1725062182::1::::<><>::
 level.tscn::PackedScene::5697988967825143817::1725652527::0::1::::<><>::uid://bf2h864pqqrjh::::res://titleset/game_titleset_1.png
-::res://audio/::1750633679
+::res://audio/::1750871839
 audio_controller.gd::GDScript::-1::1750177887::0::1::::<>Node2D<>::
-audio_controller.tscn::PackedScene::925922856243716732::1750633679::0::1::::<><>::uid://bplbmdyp2esc8::::res://audio/sounds/submachine-gun-79846.mp3<>res://audio/audio_controller.gd<>uid://cyw4nnqvkp1g5::::res://audio/sounds/180904-woodland04-run-steps-skip-jump-clip-47486.mp3<>uid://br1gk8esiy7b1::::res://audio/sounds/roblox-classic-jump.mp3<>uid://n4qyfrblmfyt::::res://audio/sounds/classic_hurt.mp3<>uid://bk6vcamv0synt::::res://audio/sounds/hunt_showdown_death_sound_effect.mp3<>uid://cvvskoyme1go::::res://audio/music/Red Right Hand (From Peaky Blinders) (8-Bit Nick Cave & The Bad Seeds Emulation) - 8-Bit Arcade.mp3<>uid://dgteymctfj6hb::::res://audio/sounds/konami-pause-sound-1.mp3<>uid://cvjcjbb0ergmq::::res://audio/sounds/snkneo-geo-insert-coin-sound.mp3<>uid://b6dsxoshgnthd::::res://audio/sounds/donkey-kong-coin.mp3<>uid://bc5owffmrlhlo::::res://audio/sounds/metal-slug-mission-complete.mp3<>uid://dhgf6d6ejnedj::::res://audio/sounds/ps4-select-button.mp3
+audio_controller.tscn::PackedScene::925922856243716732::1750871839::0::1::::<><>::uid://bplbmdyp2esc8::::res://audio/sounds/submachine-gun-79846.mp3<>res://audio/audio_controller.gd<>uid://cyw4nnqvkp1g5::::res://audio/sounds/180904-woodland04-run-steps-skip-jump-clip-47486.mp3<>uid://br1gk8esiy7b1::::res://audio/sounds/roblox-classic-jump.mp3<>uid://n4qyfrblmfyt::::res://audio/sounds/classic_hurt.mp3<>uid://bk6vcamv0synt::::res://audio/sounds/hunt_showdown_death_sound_effect.mp3<>uid://cvvskoyme1go::::res://audio/music/Red Right Hand (From Peaky Blinders) (8-Bit Nick Cave & The Bad Seeds Emulation) - 8-Bit Arcade.mp3<>uid://dgteymctfj6hb::::res://audio/sounds/konami-pause-sound-1.mp3<>uid://cvjcjbb0ergmq::::res://audio/sounds/snkneo-geo-insert-coin-sound.mp3<>uid://b6dsxoshgnthd::::res://audio/sounds/donkey-kong-coin.mp3<>uid://bc5owffmrlhlo::::res://audio/sounds/metal-slug-mission-complete.mp3<>uid://dhgf6d6ejnedj::::res://audio/sounds/ps4-select-button.mp3
 ::res://audio/music/::1749836437
 Red Right Hand (From Peaky Blinders) (8-Bit Nick Cave & The Bad Seeds Emulation) - 8-Bit Arcade.mp3::AudioStreamMP3::185037369217140898::1749754094::1749836437::1::::<><>::
 ::res://audio/sounds/::1749842451
@@ -37,39 +37,41 @@ Dead.png::CompressedTexture2D::792802124114987412::1728170901::1728170901::1::::
 enemy_death_effect.gd::GDScript::-1::1728171303::0::1::::<>AnimatedSprite2D<>::
 enemy_death_effect.tscn::PackedScene::6699517390113003428::1731253377::0::1::::<><>::uid://lkblno52jbvo::::res://enemies/Dead.png<>res://enemies/enemy_death_effect.gd
 Hurt.png::CompressedTexture2D::3874375164644619292::1728170901::1728170901::1::::<><>::
-::res://enemies/gangsta1/::1750633679
+::res://enemies/gangsta1/::1750872752
+BulletEnemy.gd::GDScript::-1::1750697766::0::1::::<>AnimatedSprite2D<>::
+bullet_enemy.tscn::PackedScene::7927707388661024881::1750872752::0::1::::<><>::uid://dfrs1c4l57q0x::::res://player/All_Fire_Bullet_Pixel_16x16.png<>res://enemies/gangsta1/BulletEnemy.gd
 enemy_gangsta1.gd::GDScript::-1::1750545436::0::1::::<>CharacterBody2D<>::
-enemy_gangsta1.tscn::PackedScene::6002390351474877984::1750633679::0::1::::<><>::res://enemies/gangsta1/enemy_gangsta1.gd<>uid://bupyq5j1ykgf2::::res://enemies/gangsta1/Idle_2.png<>uid://dvovfdmnwbad3::::res://enemies/gangsta1/Hurt.png<>uid://b17khg5np5koj::::res://enemies/gangsta1/Walk.png<>uid://pmsjm4p8uka::::res://enemies/gangsta1/Shot.png<>res://scripts/state_machine/node_fiinite_state_machine.gd<>res://enemies/gangsta1/enemy_states/idle_state.gd<>res://enemies/gangsta1/enemy_states/walk_state.gd<>res://enemies/gangsta1/enemy_states/hurt_state.gd<>res://enemies/gangsta1/enemy_states/shoot_state.gd
+enemy_gangsta1.tscn::PackedScene::6002390351474877984::1750872752::0::1::::<><>::res://enemies/gangsta1/enemy_gangsta1.gd<>uid://bupyq5j1ykgf2::::res://enemies/gangsta1/Idle_2.png<>uid://dvovfdmnwbad3::::res://enemies/gangsta1/Hurt.png<>uid://b17khg5np5koj::::res://enemies/gangsta1/Walk.png<>uid://pmsjm4p8uka::::res://enemies/gangsta1/Shot.png<>res://scripts/state_machine/node_fiinite_state_machine.gd<>res://enemies/gangsta1/enemy_states/idle_state.gd<>res://enemies/gangsta1/enemy_states/walk_state.gd<>res://enemies/gangsta1/enemy_states/hurt_state.gd<>res://enemies/gangsta1/enemy_states/shoot_state.gd
 Hurt.png::CompressedTexture2D::8663413218580243082::1750538098::1750538098::1::::<><>::
 Idle_2.png::CompressedTexture2D::3822650594111056173::1726273664::1728247730::1::::<><>::
 Shot.png::CompressedTexture2D::31726907101179452::1750534369::1750534369::1::::<><>::
 Walk.png::CompressedTexture2D::4278010738992984845::1726273664::1728247730::1::::<><>::
-::res://enemies/gangsta1/enemy_states/::1750570769
+::res://enemies/gangsta1/enemy_states/::1750700343
 hurt_state.gd::GDScript::-1::1750538794::0::1::::<>NodeState<>::
 idle_state.gd::GDScript::-1::1750570769::0::1::::<>NodeState<>::
-shoot_state.gd::GDScript::-1::1750568262::0::1::::<>NodeState<>::
+shoot_state.gd::GDScript::-1::1750700343::0::1::::<>NodeState<>::
 walk_state.gd::GDScript::-1::1750570711::0::1::::<>NodeState<>::
-::res://enemies/gangsta2/::1750694650
+::res://enemies/gangsta2/::1750871838
 Attack_1.png::CompressedTexture2D::8510891991927371589::1728248047::1728248047::1::::<><>::
 Attack_2.png::CompressedTexture2D::7386062180032075511::1728248047::1728248047::1::::<><>::
 Attack_3.png::CompressedTexture2D::2965503950447285627::1728248047::1728248047::1::::<><>::
 attack_state.gd::GDScript::-1::1737586004::0::1::::<>NodeState<>::
-baseEnemy.gd::GDScript::-1::1750694650::0::1::::<>CharacterBody2D<>::
+baseEnemy.gd::GDScript::-1::1750871838::0::1::::<>CharacterBody2D<>::
 Dead.png::CompressedTexture2D::3152376559061139058::1737584386::1737584387::1::::<><>::
 gangsta_2.tscn::PackedScene::8278132279125234455::1750570278::0::1::::<><>::res://enemies/gangsta2/baseEnemy.gd<>uid://dti0faxihyfnh::::res://enemies/gangsta2/Attack_1.png<>uid://dr3qv3rbkv3fp::::res://enemies/gangsta2/Idle.png<>res://scripts/state_machine/node_fiinite_state_machine.gd<>uid://bk6bgfwftqsgo::::res://enemies/gangsta2/Dead.png<>res://enemies/gangsta2/idle_state.gd<>res://enemies/gangsta2/gravity.gd<>res://enemies/gangsta2/attack_state.gd<>res://enemies/gangsta2/state_machine_controller.gd
 gravity.gd::GDScript::-1::1737585960::0::1::::<>Node<>::
 Idle.png::CompressedTexture2D::8411285440570929489::1728248047::1728248047::1::::<><>::
 idle_state.gd::GDScript::-1::1737585960::0::1::::<>NodeState<>::
 state_machine_controller.gd::GDScript::-1::1737570181::0::1::::<>Node<>::
-Walk.gd::GDScript::-1::1750694650::0::1::::<>NodeState<>::
+Walk.gd::GDScript::-1::1750871838::0::1::::<>NodeState<>::
 Walk.png::CompressedTexture2D::4347906884341232465::1731076593::1731076593::1::::<><>::
-::res://levels/::1750694936
-base_level.tscn::PackedScene::904225154248546838::1750694936::0::1::::<><>::uid://bf2h864pqqrjh::::res://titleset/game_titleset_1.png<>uid://d0gyt2dkfqnc4::::res://player/player.tscn<>uid://dw28dx6u7n733::::res://titleset/power_line_2.png<>uid://bns3a67kyvoyb::::res://titleset/power_line_1.png<>uid://x671lhqt5duj::::res://titleset/24.png<>uid://ducy1jcox5p3w::::res://titleset/25.png<>uid://c6a4ogvkh8mwm::::res://titleset/26.png<>uid://br5bxqgt0a2gl::::res://titleset/lava.png<>res://player/player_camera.gd
-level_1.tscn::PackedScene::5189835758761210420::1750633678::0::1::::<><>::uid://m5aprl02auuo::::res://levels/base_level.tscn<>uid://ccaj7u6w1n6wq::::res://background/parallax_background.tscn<>uid://crruqy5ve7qd1::::res://enemies/gangsta1/enemy_gangsta1.tscn<>uid://bqcn6g0yflk41::::res://ui/game_screen.tscn<>uid://bkguac4rj6dyt::::res://pickups/health_pickup/health_pickup.tscn<>uid://cj5pcs1brgfi3::::res://collectibles/money/money.tscn<>uid://2up4sike65k3::::res://levels/door/door.tscn
-level_2.tscn::PackedScene::7215039721162475599::1750633679::0::1::::<><>::uid://m5aprl02auuo::::res://levels/base_level.tscn<>uid://ccaj7u6w1n6wq::::res://background/parallax_background.tscn<>uid://crruqy5ve7qd1::::res://enemies/gangsta1/enemy_gangsta1.tscn<>uid://bqcn6g0yflk41::::res://ui/game_screen.tscn<>uid://bkguac4rj6dyt::::res://pickups/health_pickup/health_pickup.tscn<>uid://cj5pcs1brgfi3::::res://collectibles/money/money.tscn
-::res://levels/door/::1750633679
+::res://levels/::1750872752
+base_level.tscn::PackedScene::904225154248546838::1750872752::0::1::::<><>::uid://bf2h864pqqrjh::::res://titleset/game_titleset_1.png<>uid://d0gyt2dkfqnc4::::res://player/player.tscn<>uid://dw28dx6u7n733::::res://titleset/power_line_2.png<>uid://bns3a67kyvoyb::::res://titleset/power_line_1.png<>uid://x671lhqt5duj::::res://titleset/24.png<>uid://ducy1jcox5p3w::::res://titleset/25.png<>uid://c6a4ogvkh8mwm::::res://titleset/26.png<>uid://0vei1g475rc1::::res://titleset/lava1.0.png<>res://player/player_camera.gd
+level_1.tscn::PackedScene::5189835758761210420::1750872752::0::1::::<><>::uid://m5aprl02auuo::::res://levels/base_level.tscn<>uid://ccaj7u6w1n6wq::::res://background/parallax_background.tscn<>uid://crruqy5ve7qd1::::res://enemies/gangsta1/enemy_gangsta1.tscn<>uid://bqcn6g0yflk41::::res://ui/game_screen.tscn<>uid://bkguac4rj6dyt::::res://pickups/health_pickup/health_pickup.tscn<>uid://cj5pcs1brgfi3::::res://collectibles/money/money.tscn<>uid://2up4sike65k3::::res://levels/door/door.tscn
+level_2.tscn::PackedScene::7215039721162475599::1750872752::0::1::::<><>::uid://m5aprl02auuo::::res://levels/base_level.tscn<>uid://ccaj7u6w1n6wq::::res://background/parallax_background.tscn<>uid://crruqy5ve7qd1::::res://enemies/gangsta1/enemy_gangsta1.tscn<>uid://bqcn6g0yflk41::::res://ui/game_screen.tscn<>uid://bkguac4rj6dyt::::res://pickups/health_pickup/health_pickup.tscn<>uid://cj5pcs1brgfi3::::res://collectibles/money/money.tscn
+::res://levels/door/::1750872752
 door.gd::GDScript::-1::1749840561::0::1::::<>Node2D<>::
-door.tscn::PackedScene::1937349834462499808::1750633679::0::1::::<><>::res://levels/door/door.gd<>uid://ctgwrtdfoxppo::::res://levels/door/pixil-frame-0 (3).png
+door.tscn::PackedScene::1937349834462499808::1750872752::0::1::::<><>::res://levels/door/door.gd<>uid://ctgwrtdfoxppo::::res://levels/door/pixil-frame-0 (3).png
 pixil-frame-0 (3).png::CompressedTexture2D::6120182798195295168::1733789331::1733789331::1::::<><>::
 ::res://levels/test_levels/::1731280783
 test_level.tscn::PackedScene::2173059921679878915::1731280783::0::1::::<><>::uid://m5aprl02auuo::::res://levels/base_level.tscn<>uid://ccaj7u6w1n6wq::::res://background/parallax_background.tscn<>uid://bqcn6g0yflk41::::res://ui/game_screen.tscn<>uid://crruqy5ve7qd1::::res://enemies/gangsta1/enemy_gangsta1.tscn<>uid://bkguac4rj6dyt::::res://pickups/health_pickup/health_pickup.tscn<>uid://cj5pcs1brgfi3::::res://collectibles/money/money.tscn
@@ -80,17 +82,17 @@ health_pickup.tscn::PackedScene::3101909877084793143::1749839454::0::1::::<><>::
 tile_0044.png::CompressedTexture2D::7003122617464444571::1731194983::1731194983::1::::<><>::
 tile_0045.png::CompressedTexture2D::4523841334143755626::1731195012::1731195012::1::::<><>::
 tile_0046.png::CompressedTexture2D::5885583624420426573::1731195001::1731195002::1::::<><>::
-::res://player/::1750633679
+::res://player/::1750872752
 All_Fire_Bullet_Pixel_16x16.png::CompressedTexture2D::7546440177986990121::1728068057::1728068057::1::::<><>::
 bullet.gd::GDScript::-1::1728170232::0::1::::<>AnimatedSprite2D<>::
-bullet.tscn::PackedScene::7088443703539174573::1750633679::0::1::::<><>::uid://dfrs1c4l57q0x::::res://player/All_Fire_Bullet_Pixel_16x16.png<>res://player/bullet.gd
 BulletImpactEffect.gd::GDScript::-1::1728167457::0::1::::<>AnimatedSprite2D<>::
-bullet_impact_effect.tscn::PackedScene::77016898112159714::1728173516::0::1::::<><>::uid://dfrs1c4l57q0x::::res://player/All_Fire_Bullet_Pixel_16x16.png<>res://player/BulletImpactEffect.gd
+bullet_impact_effect.tscn::PackedScene::77016898112159714::1750871839::0::1::::<><>::uid://dfrs1c4l57q0x::::res://player/All_Fire_Bullet_Pixel_16x16.png<>res://player/BulletImpactEffect.gd
+bullet_player.tscn::PackedScene::7088443703539174573::1750871839::0::1::::<><>::uid://dfrs1c4l57q0x::::res://player/All_Fire_Bullet_Pixel_16x16.png<>res://player/bullet.gd
 Hurt.png::CompressedTexture2D::4339754368298469648::1728425138::1728425138::1::::<><>::
 Idle_2.png::CompressedTexture2D::2061667202299668134::1725653380::1725653380::1::::<><>::
 Jump.png::CompressedTexture2D::4950205589352027733::1726013693::1726013693::1::::<><>::
-player.gd::GDScript::-1::1750570110::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::8927861969691606629::1750633679::0::1::::<><>::res://player/player.gd<>uid://4mxmfnpfcvgg::::res://player/Idle_2.png<>uid://b7h2hk2jo65t::::res://player/Run.png<>uid://b23hedggvhg6s::::res://player/Hurt.png<>uid://ccr6fshtve3rt::::res://player/Jump.png<>uid://dv8audiks2rry::::res://player/Shot.png<>uid://chbbsnq5i0oie::::res://player/Walk.png
+player.gd::GDScript::-1::1750697433::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::8927861969691606629::1750872752::0::1::::<><>::res://player/player.gd<>uid://4mxmfnpfcvgg::::res://player/Idle_2.png<>uid://b7h2hk2jo65t::::res://player/Run.png<>uid://b23hedggvhg6s::::res://player/Hurt.png<>uid://ccr6fshtve3rt::::res://player/Jump.png<>uid://dv8audiks2rry::::res://player/Shot.png<>uid://chbbsnq5i0oie::::res://player/Walk.png
 player_camera.gd::GDScript::-1::1731297983::0::1::::<>Camera2D<>::
 Run.png::CompressedTexture2D::136722551503608427::1725653425::1725653425::1::::<><>::
 Shot.png::CompressedTexture2D::8701388119648029270::1728067223::1728067224::1::::<><>::
@@ -109,12 +111,13 @@ settings_manager.gd::GDScript::-1::1731293570::0::1::::<>Node<>::
 ::res://scripts/state_machine/::1750183760
 node_fiinite_state_machine.gd::GDScript::-1::1750183760::0::1::::NodeFiniteStateMachine<>Node<>::
 node_state.gd::GDScript::-1::1750178605::0::1::::NodeState<>Node<>::
-::res://titleset/::1750693114
+::res://titleset/::1750873093
 24.png::CompressedTexture2D::1680329077784674973::1728063194::1728063194::1::::<><>::
 25.png::CompressedTexture2D::8568671794283782058::1728063194::1728063194::1::::<><>::
 26.png::CompressedTexture2D::6950481662116115872::1728063194::1728063194::1::::<><>::
 game_titleset_1.png::CompressedTexture2D::2793588725117847837::1725062742::1725062835::1::::<><>::
-lava.png::CompressedTexture2D::3641664998953165619::1750693114::1750693114::1::::<><>::
+lava1.0.png::CompressedTexture2D::1798331554345889074::1750872361::1750872361::1::::<><>::
+lava2.0.png::CompressedTexture2D::780691650769199715::1750873093::1750873093::1::::<><>::
 power_line_1.png::CompressedTexture2D::3337736204502923473::1728062845::1728062941::1::::<><>::
 power_line_2.png::CompressedTexture2D::8761165085496647932::1728062857::1728062952::1::::<><>::
 ::res://ui/::1750200214
@@ -135,6 +138,6 @@ health_bar.gd::GDScript::-1::1728424085::0::1::::<>Node2D<>::
 health_bar.tscn::PackedScene::4570284388498468433::1749839145::0::1::::<><>::uid://di75wya6ekk8h::::res://ui/health_bar/heart_1.png<>res://ui/health_bar/health_bar.gd<>uid://cl1ohjtvrq7dk::::res://ui/health_bar/heart_0.png
 heart_0.png::CompressedTexture2D::5599455510505140064::1728415852::1728416169::1::::<><>::
 heart_1.png::CompressedTexture2D::7788694947537029377::1728415852::1728416159::1::::<><>::
-::res://ui/theme/::1750694650
-game_theme.tres::Theme::7123194310752429053::1750694650::0::1::::<><>::uid://dm2m0h5r27fk4::::res://ui/theme/GravityRegular5.ttf
+::res://ui/theme/::1750871838
+game_theme.tres::Theme::7123194310752429053::1750871838::0::1::::<><>::uid://dm2m0h5r27fk4::::res://ui/theme/GravityRegular5.ttf
 GravityRegular5.ttf::FontFile::8058040037673456341::1731274633::1731274633::1::::<><>::
