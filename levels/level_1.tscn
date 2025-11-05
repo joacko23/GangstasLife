@@ -137,5 +137,5 @@ debug_color = Color(0.882859, 0.262061, 0.535783, 0.42)
 position = Vector2(4247, 992)
 next_scene = "Level2"
 
-[connection signal="body_entered" from="Floor/Floor" to="Player" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Floor/Floor" to="Player" method="_on_floor_body_entered"]
+[connection signal="body_entered" from="Floor/Floor" to="Player" method="_on_area_2d_body_entered"]

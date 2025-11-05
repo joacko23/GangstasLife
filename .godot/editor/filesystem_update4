@@ -3,11 +3,5 @@ res://ui/theme/game_theme.tres
 res://enemies/gangsta2/baseEnemy.gd
 res://enemies/gangsta2/Walk.gd
 res://player/player.tscn
-res://levels/door/door.tscn
 res://enemies/gangsta1/enemy_gangsta1.tscn
-res://levels/level_2.tscn
-res://audio/audio_controller.tscn
-res://player/bullet_player.tscn
-res://player/bullet_impact_effect.tscn
-res://enemies/gangsta1/bullet_enemy.tscn
 res://levels/base_level.tscn

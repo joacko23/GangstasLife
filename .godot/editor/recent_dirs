@@ -1,10 +1,11 @@
+C:/Users/Usuario/Documents/ProyectoVideojuego/GangstasLife
+res://ui
 res://enemies/gangsta1
 res://enemies/gangsta1/enemy_states
 res://audio
 res://enemies/gangsta2
 res://scripts
 res://levels/door
-res://ui
 res://ui/theme
 res://pickups/health_pickup
 res://player
